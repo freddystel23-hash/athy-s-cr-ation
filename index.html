@@ -1,1263 +1,213 @@
 !DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Athy’s Création – AI, Storytelling & Visuels premium</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Athy’s Création : GPT personnel privé, Agent AI discret, storytelling professionnel et visuels photos AI (publicitaire, shooting, branding) pour entrepreneurs."
-  />
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, sans-serif;
-      background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000 100%);
-      color: #e5e7eb;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-
-    /* HEADER */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(14px);
-      background: rgba(15, 23, 42, 0.95);
-      border-bottom: 1px solid #1f2937;
-    }
-
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-    }
-
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-circle {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 0, #4ade80, #22c55e, #0ea5e9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: #020617;
-      font-size: 18px;
-    }
-
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .logo-text-title {
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-size: 11px;
-      color: #e5e7eb;
-    }
-
-    .logo-text-sub {
-      font-size: 11px;
-      color: #9ca3af;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 18px;
-      list-style: none;
-      font-size: 14px;
-    }
-
-    nav a {
-      border-bottom: 1px solid transparent;
-      padding-bottom: 4px;
-    }
-
-    nav a:hover {
-      border-color: #22c55e;
-    }
-
-    .cta-top {
-      padding: 8px 20px;
-      border-radius: 999px;
-      border: none;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      background: radial-gradient(circle at 0 0, #4ade80, #22c55e, #0ea5e9);
-      box-shadow: 0 0 30px rgba(34, 197, 94, 0.4);
-      color: #020617;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 56px 0 40px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
-      gap: 32px;
-    }
-
-    .hero-kicker {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.25em;
-      color: #9ca3af;
-      margin-bottom: 10px;
-    }
-
-    .hero-title {
-      font-size: clamp(30px, 4vw, 40px);
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .hero-title span {
-      background: linear-gradient(to right, #22c55e, #38bdf8);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-subtitle {
-      font-size: 14px;
-      color: #9ca3af;
-      max-width: 470px;
-      margin-bottom: 20px;
-    }
-
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 18px;
-    }
-
-    .hero-badge {
-      font-size: 11px;
-      padding: 6px 11px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid #1f2937;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .btn-main {
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: 600;
-      background: radial-gradient(circle at 0 0, #4ade80, #22c55e, #0ea5e9);
-      color: #020617;
-      box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
-    }
-
-    .btn-ghost {
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid #374151;
-      background: rgba(15, 23, 42, 0.95);
-      color: #e5e7eb;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .hero-note {
-      font-size: 12px;
-      color: #6b7280;
-    }
-
-    .hero-dashboard {
-      background: radial-gradient(circle at 0 0, #1f2937, #020617 70%);
-      border-radius: 24px;
-      border: 1px solid #1f2937;
-      padding: 18px;
-      box-shadow: 0 30px 80px rgba(15, 23, 42, 0.9);
-    }
-
-    .hero-dashboard-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-
-    .hero-dashboard-title {
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .hero-dashboard-pill {
-      font-size: 11px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(34, 197, 94, 0.16);
-      border: 1px solid rgba(34, 197, 94, 0.5);
-      color: #bbf7d0;
-    }
-
-    .hero-dashboard-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .small-card {
-      border-radius: 14px;
-      padding: 10px;
-      background: rgba(15, 23, 42, 0.96);
-      border: 1px solid #1f2937;
-      font-size: 11px;
-      color: #9ca3af;
-    }
-
-    .small-card h4 {
-      font-size: 12px;
-      margin-bottom: 4px;
-      color: #e5e7eb;
-    }
-
-    .small-card span {
-      display: block;
-      margin-top: 4px;
-      color: #22c55e;
-    }
-
-    .hero-tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 10px;
-    }
-
-    .hero-tag {
-      font-size: 10px;
-      padding: 4px 9px;
-      border-radius: 999px;
-      border: 1px solid #374151;
-      background: rgba(15, 23, 42, 0.95);
-      color: #9ca3af;
-    }
-
-    .hero-stats {
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      font-size: 11px;
-      color: #9ca3af;
-    }
-
-    .hero-stats strong {
-      display: block;
-      font-size: 13px;
-      color: #e5e7eb;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 40px 0;
-    }
-
-    h2.section-title {
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-
-    .section-subtitle {
-      font-size: 13px;
-      color: #9ca3af;
-      margin-bottom: 18px;
-    }
-
-    /* SERVICES */
-    .chips-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 18px;
-    }
-
-    .chip {
-      font-size: 11px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.96);
-      border: 1px solid #1f2937;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-
-    .service-card {
-      border-radius: 18px;
-      padding: 16px;
-      background: rgba(15, 23, 42, 0.97);
-      border: 1px solid #1f2937;
-    }
-
-    .service-tag {
-      font-size: 10px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.98);
-      border: 1px solid #374151;
-      color: #9ca3af;
-      display: inline-block;
-      margin-bottom: 6px;
-    }
-
-    .service-title {
-      font-size: 16px;
-      margin-bottom: 6px;
-    }
-
-    .service-text {
-      font-size: 13px;
-      color: #9ca3af;
-      margin-bottom: 6px;
-    }
-
-    .service-price {
-      font-size: 13px;
-      color: #a5b4fc;
-      font-weight: 600;
-    }
-
-    .service-img {
-      margin-top: 10px;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid #1f2937;
-    }
-
-    /* TARIFS */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-
-    .pricing-card {
-      border-radius: 20px;
-      padding: 18px;
-      background: rgba(15, 23, 42, 0.97);
-      border: 1px solid #1f2937;
-      font-size: 13px;
-    }
-
-    .pricing-title {
-      font-size: 15px;
-      margin-bottom: 4px;
-    }
-
-    .pricing-badge {
-      font-size: 11px;
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: rgba(34, 197, 94, 0.16);
-      border: 1px solid rgba(34, 197, 94, 0.4);
-      color: #bbf7d0;
-      display: inline-block;
-      margin-bottom: 6px;
-    }
-
-    .pricing-price {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .pricing-note {
-      font-size: 11px;
-      color: #9ca3af;
-      margin-bottom: 8px;
-    }
-
-    .pricing-list {
-      list-style: none;
-      font-size: 12px;
-      color: #9ca3af;
-    }
-
-    .pricing-list li::before {
-      content: "• ";
-      color: #22c55e;
-    }
-
-    /* PORTFOLIO */
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-
-    .portfolio-card {
-      border-radius: 18px;
-      overflow: hidden;
-      background: rgba(15, 23, 42, 0.97);
-      border: 1px solid #1f2937;
-    }
-
-    .portfolio-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-
-    .portfolio-body {
-      padding: 12px 14px 14px;
-      font-size: 13px;
-      color: #9ca3af;
-    }
-
-    .portfolio-body h4 {
-      font-size: 14px;
-      margin-bottom: 4px;
-      color: #e5e7eb;
-    }
-
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
-      gap: 20px;
-    }
-
-    .contact-card {
-      border-radius: 20px;
-      padding: 18px;
-      background: rgba(15, 23, 42, 0.97);
-      border: 1px solid #1f2937;
-      font-size: 13px;
-      color: #9ca3af;
-    }
-
-    .contact-card h3 {
-      font-size: 16px;
-      margin-bottom: 8px;
-      color: #e5e7eb;
-    }
-
-    .contact-field {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .contact-field label {
-      font-size: 12px;
-      color: #9ca3af;
-    }
-
-    .contact-field input,
-    .contact-field textarea {
-      font: inherit;
-      padding: 8px 10px;
-      border-radius: 10px;
-      border: 1px solid #374151;
-      background: #020617;
-      color: #e5e7eb;
-    }
-
-    .contact-field textarea {
-      resize: vertical;
-      min-height: 80px;
-    }
-
-    .contact-submit {
-      margin-top: 10px;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: none;
-      font-size: 14px;
-      cursor: pointer;
-      background: radial-gradient(circle at 0 0, #4ade80, #22c55e, #0ea5e9);
-      color: #020617;
-      font-weight: 600;
-    }
-
-    /* CHATBOT */
-    .chatbot-wrapper {
-      margin-top: 30px;
-    }
-
-    .chatbot-panel {
-      border-radius: 22px;
-      background: rgba(15, 23, 42, 0.98);
-      border: 1px solid #1f2937;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      height: 340px;
-    }
-
-    .chatbot-header {
-      padding: 12px 14px;
-      border-bottom: 1px solid #111827;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .chatbot-header-title {
-      display: flex;
-      flex-direction: column;
-      font-size: 13px;
-      color: #e5e7eb;
-    }
-
-    .chatbot-header-title span {
-      font-size: 11px;
-      color: #9ca3af;
-    }
-
-    .chatbot-close {
-      background: transparent;
-      border: none;
-      color: #6b7280;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .chatbot-messages {
-      flex: 1;
-      padding: 12px 14px;
-      overflow-y: auto;
-      font-size: 13px;
-    }
-
-    .chatbot-message {
-      margin-bottom: 10px;
-      display: flex;
-    }
-
-    .chatbot-message.bot {
-      justify-content: flex-start;
-    }
-
-    .chatbot-message.user {
-      justify-content: flex-end;
-    }
-
-    .chatbot-bubble {
-      max-width: 80%;
-      padding: 9px 11px;
-      border-radius: 14px;
-      line-height: 1.5;
-    }
-
-    .chatbot-message.bot .chatbot-bubble {
-      background: #020617;
-      border: 1px solid #1f2937;
-      color: #e5e7eb;
-    }
-
-    .chatbot-message.user .chatbot-bubble {
-      background: radial-gradient(circle at 0 0, #4ade80, #22c55e, #0ea5e9);
-      color: #020617;
-      font-weight: 500;
-    }
-
-    .chatbot-footer {
-      padding: 10px 12px 12px;
-      border-top: 1px solid #111827;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .chatbot-input-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .chatbot-mic {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      border: 1px solid #374151;
-      background: #020617;
-      color: #e5e7eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .chatbot-input {
-      flex: 1;
-      border-radius: 999px;
-      border: 1px solid #374151;
-      background: #020617;
-      padding: 8px 12px;
-      color: #e5e7eb;
-      font: inherit;
-      font-size: 13px;
-    }
-
-    .chatbot-send {
-      border-radius: 999px;
-      border: none;
-      padding: 8px 14px;
-      background: #22c55e;
-      color: #020617;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .chatbot-rule {
-      font-size: 11px;
-      color: #6b7280;
-    }
-
-    /* FOOTER */
-    footer {
-      padding: 22px 0 26px;
-      border-top: 1px solid #111827;
-      margin-top: 24px;
-      font-size: 11px;
-      color: #6b7280;
-      text-align: center;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      nav ul {
-        display: none;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .hero {
-        padding-top: 34px;
-      }
-      .chatbot-panel {
-        height: 360px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- HEADER -->
-  <header>
-    <div class="container">
-      <div class="navbar">
-        <div class="logo-wrap">
-          <div class="logo-circle">A</div>
-          <div class="logo-text">
-            <div class="logo-text-title">ATHY’S CRÉATION</div>
-            <div class="logo-text-sub">AI • Storytelling • Visuels premium</div>
-          </div>
-        </div>
-
-        <nav>
-          <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#tarifs">Tarifs</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-
-        <button class="cta-top" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-          Parler de mon projet
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <main id="accueil">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="hero-kicker">Pour entrepreneurs & créateurs exigeants</div>
-          <h1 class="hero-title">
-            AI, storytelling & visuels <span>au service de ta marque</span>
-          </h1>
-          <p class="hero-subtitle">
-            Athy’s Création t’accompagne pour construire un univers clair et premium :
-            GPT personnel privé, Agent AI discret, textes professionnels et visuels photos AI pour ta communication.
-          </p>
-
-          <div class="hero-badges">
-            <div class="hero-badge">GPT personnel privé AI</div>
-            <div class="hero-badge">Agent AI discret</div>
-            <div class="hero-badge">Storytelling & portfolio</div>
-            <div class="hero-badge">Photos publicitaires AI</div>
-          </div>
-
-          <div class="hero-buttons">
-            <button class="btn-main" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
-              Découvrir les offres
-            </button>
-            <button class="btn-ghost" onclick="document.getElementById('tarifs').scrollIntoView({behavior:'smooth'})">
-              Voir les tarifs
-            </button>
-          </div>
-
-          <p class="hero-note">
-            1 studio, 1 interlocuteur, pour clarifier ton image et ta communication.
-          </p>
-        </div>
-
-        <aside class="hero-dashboard" aria-label="Dashboard Athy’s Création">
-          <div class="hero-dashboard-header">
-            <div class="hero-dashboard-title">Dashboard Athy’s AI</div>
-            <div class="hero-dashboard-pill">Studio AI & Storytelling</div>
-          </div>
-
-          <div class="hero-dashboard-grid">
-            <div class="small-card">
-              <h4>GPT personnel AI</h4>
-              <p>Un GPT privé, réglé sur ton activité, ton ton et tes offres.</p>
-              <span>Ton copilote au quotidien.</span>
-            </div>
-            <div class="small-card">
-              <h4>Agent AI discret</h4>
-              <p>Un agent AI qui t’aide en coulisse dans ta gestion et tes réponses.</p>
-              <span>Invisible pour tes clients.</span>
-            </div>
-          </div>
-
-          <div class="hero-tag-row">
-            <div class="hero-tag">Storytelling & textes pro</div>
-            <div class="hero-tag">Visuels photos AI de marque</div>
-            <div class="hero-tag">Portfolio & image premium</div>
-          </div>
-
-          <div class="hero-stats">
-            <div>
-              <strong>3 piliers</strong>
-              GPT personnel, Agent AI, image de marque.
-            </div>
-            <div>
-              <strong>Accompagnement</strong>
-              Pour entrepreneurs qui veulent une présence claire et cohérente.
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services">
-      <div class="container">
-        <h2 class="section-title">Services Athy’s Création</h2>
-        <p class="section-subtitle">
-          Des offres pensées pour clarifier ton message, automatiser intelligemment et renforcer ton image grâce à l’AI.
-        </p>
-
-        <div class="chips-row">
-          <span class="chip">GPT personnel privé</span>
-          <span class="chip">Agent AI discret</span>
-          <span class="chip">Storytelling & textes pro</span>
-          <span class="chip">Photos publicitaires & branding AI</span>
-        </div>
-
-        <div class="services-grid">
-          <!-- GPT personnel AI -->
-          <article class="service-card">
-            <div class="service-tag">AI sur mesure</div>
-            <h3 class="service-title">GPT personnel privé AI</h3>
-            <p class="service-text">
-              Création de ton propre GPT, entraîné sur ton activité, ton ton de voix, tes offres,
-              pour t’aider à répondre, créer du contenu et structurer tes idées.
-            </p>
-            <p class="service-price">À partir de 390 €</p>
-            <div class="service-img">
-              <img src="https://picsum.photos/seed/athys-gpt/800/450"
-                   alt="Interface GPT personnel AI pour entrepreneur" />
-            </div>
-          </article>
-
-          <!-- Agent AI -->
-          <article class="service-card">
-            <div class="service-tag">Agent AI discret</div>
-            <h3 class="service-title">Agent AI de gestion</h3>
-            <p class="service-text">
-              Un Agent AI configuré pour t’aider à suivre les demandes, proposer des réponses,
-              t’assister dans ta gestion quotidienne. Toujours discret, jamais visible côté client.
-            </p>
-            <p class="service-price">À partir de 490 €</p>
-            <div class="service-img">
-              <img src="https://picsum.photos/seed/athys-agent/800/450"
-                   alt="Agent AI discret pour gestion d’activité" />
-            </div>
-          </article>
-
-          <!-- Storytelling -->
-          <article class="service-card">
-            <div class="service-tag">Storytelling & textes</div>
-            <h3 class="service-title">Storytelling & Portfolio</h3>
-            <p class="service-text">
-              Clarification de ton histoire, de tes offres, de ton positionnement.
-              Textes professionnels pour ton site, ton portfolio ou ta page de présentation.
-            </p>
-            <p class="service-price">À partir de 350 €</p>
-            <div class="service-img">
-              <img src="https://picsum.photos/seed/athys-story/800/450"
-                   alt="Storytelling professionnel pour marque" />
-            </div>
-          </article>
-
-          <!-- Visuels photos AI -->
-          <article class="service-card">
-            <div class="service-tag">Visuels photos AI</div>
-            <h3 class="service-title">Photos publicitaires, shooting & branding AI</h3>
-            <p class="service-text">
-              Création de visuels photos AI pour renforcer ton image :
-              publicités, shooting produits, portraits branding, bannières et visuels réseaux sociaux.
-            </p>
-            <p class="service-price">À partir de 420 €</p>
-            <div class="service-img">
-              <img src="https://picsum.photos/seed/athys-photos/800/450"
-                   alt="Visuels photos AI pour publicité et branding" />
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- TARIFS -->
-    <section id="tarifs">
-      <div class="container">
-        <h2 class="section-title">Tarifs</h2>
-        <p class="section-subtitle">
-          Des offres claires pour bâtir un écosystème AI et une image de marque solide autour de ton activité.
-        </p>
-
-        <div class="pricing-grid">
-          <!-- GPT -->
-          <article class="pricing-card">
-            <div class="pricing-badge">GPT personnel AI</div>
-            <h3 class="pricing-title">Pack GPT Athy’s</h3>
-            <p class="pricing-price">390 €</p>
-            <p class="pricing-note">Création et configuration de ton GPT personnel privé.</p>
-            <ul class="pricing-list">
-              <li>Analyse de ton activité et de tes objectifs.</li>
-              <li>Paramétrage complet du GPT avec ton ton de voix.</li>
-              <li>Scénarios d’utilisation personnalisés.</li>
-              <li>Guide d’utilisation simple.</li>
-            </ul>
-          </article>
-
-          <!-- Agent AI -->
-          <article class="pricing-card">
-            <div class="pricing-badge">Agent AI discret</div>
-            <h3 class="pricing-title">Pack Manager AI</h3>
-            <p class="pricing-price">490 €</p>
-            <p class="pricing-note">Un Agent AI discret qui travaille pour toi en coulisse.</p>
-            <ul class="pricing-list">
-              <li>Définition des tâches à automatiser.</li>
-              <li>Création de l’agent AI (règles + ton).</li>
-              <li>Modèles de réponses & scénarios d’aide.</li>
-              <li>Support de prise en main.</li>
-            </ul>
-          </article>
-
-          <!-- Storytelling -->
-          <article class="pricing-card">
-            <div class="pricing-badge">Storytelling & textes</div>
-            <h3 class="pricing-title">Pack Storytelling & Portfolio</h3>
-            <p class="pricing-price">350 €</p>
-            <p class="pricing-note">Clarifier ton histoire, ton offre et ton message.</p>
-            <ul class="pricing-list">
-              <li>Storytelling de marque structuré.</li>
-              <li>Texte pour page d’accueil ou présentation.</li>
-              <li>Axe éditorial pour ta communication.</li>
-              <li>Conseils sur la cohérence de ton image.</li>
-            </ul>
-          </article>
-
-          <!-- Visuels photos AI -->
-          <article class="pricing-card">
-            <div class="pricing-badge">Visuels photos AI</div>
-            <h3 class="pricing-title">Pack Photos pub & branding AI</h3>
-            <p class="pricing-price">420 €</p>
-            <p class="pricing-note">
-              Visuels photos AI pour publicité, shooting produit ou image personnelle.
-            </p>
-            <ul class="pricing-list">
-              <li>Jusqu’à 12 visuels AI (pub, produits, portraits).</li>
-              <li>Couleurs et ambiance alignées à ta marque.</li>
-              <li>Formats optimisés pour site & réseaux sociaux.</li>
-              <li>1 série d’ajustements incluse.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio">
-      <div class="container">
-        <h2 class="section-title">Portfolio Créatif</h2>
-        <p class="section-subtitle">
-          Aperçu de styles que nous pouvons créer ensemble : studio AI, storytelling, branding et visuels publicitaires.
-        </p>
-
-        <div class="portfolio-grid">
-          <article class="portfolio-card">
-            <img src="https://picsum.photos/seed/athys-studio/900/600"
-                 alt="Studio AI créatif pour entrepreneurs" />
-            <div class="portfolio-body">
-              <h4>Studio AI pour entrepreneurs</h4>
-              <p>Dashboard AI + textes pro pour présenter ton offre de façon claire.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-card">
-            <img src="https://picsum.photos/seed/athys-story1/900/600"
-                 alt="Storytelling AI pour vidéo" />
-            <div class="portfolio-body">
-              <h4>Storytelling vidéo AI</h4>
-              <p>Scénarios AI pour vidéos publicitaires ou teaser de lancement.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-card">
-            <img src="https://picsum.photos/seed/athys-story2/900/600"
-                 alt="Storytelling AI pour réseaux sociaux" />
-            <div class="portfolio-body">
-              <h4>Storytelling réseaux sociaux</h4>
-              <p>Carrousels + textes AI pour raconter ton histoire en plusieurs slides.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-card">
-            <img src="https://picsum.photos/seed/athys-brand/900/600"
-                 alt="Branding AI pour marque personnelle" />
-            <div class="portfolio-body">
-              <h4>Branding AI</h4>
-              <p>Visuels AI qui reflètent ton univers et ta personnalité de marque.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-card">
-            <img src="https://picsum.photos/seed/athys-shooting/900/600"
-                 alt="Shooting publicitaire AI" />
-            <div class="portfolio-body">
-              <h4>Shooting publicitaire AI</h4>
-              <p>Photos AI pour mettre en valeur un produit, une offre ou un événement.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-card">
-            <img src="https://picsum.photos/seed/athys-social/900/600"
-                 alt="Visuels AI pour réseaux sociaux" />
-            <div class="portfolio-body">
-              <h4>Visuels AI pour réseaux</h4>
-              <p>Pack d’images AI prêtes à poster pour ta communication quotidienne.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHATBOT -->
-    <section>
-      <div class="container chatbot-wrapper">
-        <div class="chatbot-panel" id="chatbotPanel">
-          <div class="chatbot-header">
-            <div class="chatbot-header-title">
-              Chaton Athy’s
-              <span>Assistant AI du site (texte & micro)</span>
-            </div>
-            <button class="chatbot-close" type="button" id="chatbotClose">×</button>
-          </div>
-
-          <div class="chatbot-messages" id="chatbotMessages">
-            <div class="chatbot-message bot">
-              <div class="chatbot-bubble">
-                Bonjour 👋 Je suis Chaton Athy’s. Tu peux m’écrire ou utiliser le micro 🎤.
-                Je t’aide à comprendre les offres (GPT personnel, Agent AI, storytelling, photos publicitaires AI…).
-              </div>
-            </div>
-            <div class="chatbot-message bot">
-              <div class="chatbot-bubble">
-                Si tu écris, je réponds uniquement par écrit.  
-                Si tu parles avec le micro, je peux aussi te répondre à voix haute.
-              </div>
-            </div>
-          </div>
-
-          <div class="chatbot-footer">
-            <div class="chatbot-input-row">
-              <button class="chatbot-mic" id="chatbotMic" type="button" title="Parler avec le micro">
-                🎤
-              </button>
-              <input id="chatbotInput" class="chatbot-input" placeholder="Écris ton message ici…" />
-              <button class="chatbot-send" id="chatbotSend" type="button">
-                Envoyer
-              </button>
-            </div>
-            <div class="chatbot-rule">
-              Règles : je réponds par écrit à tes messages. Je parle à voix haute uniquement si tu utilises le micro 🎤.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-subtitle">
-          Tu as un projet GPT, Agent AI, storytelling ou visuels photos AI pour ta marque ?
-          Partage quelques informations, Athy’s Création reviendra vers toi.
-        </p>
-
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Parler de ton projet</h3>
-            <p>
-              Décris ton activité, ton projet, et ce que tu aimerais créer avec Athy’s Création.
-            </p>
-
-            <form>
-              <div class="contact-field">
-                <label for="nom">Nom & prénom</label>
-                <input type="text" id="nom" name="nom" placeholder="Ton nom" />
-              </div>
-              <div class="contact-field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="tonemail@exemple.com" />
-              </div>
-              <div class="contact-field">
-                <label for="message">Ton message</label>
-                <textarea id="message" name="message"
-                  placeholder="Parle-moi de ton projet : GPT, Agent AI, storytelling, visuels AI…"></textarea>
-              </div>
-              <button type="button" class="contact-submit">
-                Envoyer ma demande
-              </button>
-            </form>
-          </div>
-
-          <div class="contact-card">
-            <h3>Informations pratiques</h3>
-            <p>
-              Athy’s Création accompagne les entrepreneurs, indépendants et petites équipes
-              qui veulent une image claire, des outils AI efficaces et un storytelling professionnel.
-            </p>
-            <div class="contact-field">
-              <label>Services principaux</label>
-              <p>
-                • GPT personnel privé AI<br />
-                • Agent AI discret (en coulisse)<br />
-                • Storytelling & textes de marque<br />
-                • Visuels photos AI : publicité, shooting, branding
-              </p>
-            </div>
-            <div class="contact-field">
-              <label>Délai de réponse</label>
-              <p>
-                Athy’s Création s’occupe de ta demande et te répond dans un délai de 24 heures (jours ouvrés).
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      © Athy’s Création – Studio AI & Storytelling. Tous droits réservés.
-    </div>
-  </footer>
-
-  <!-- SCRIPT CHATBOT -->
-  <script>
-    const messagesEl = document.getElementById("chatbotMessages");
-    const inputEl = document.getElementById("chatbotInput");
-    const sendBtn = document.getElementById("chatbotSend");
-    const micBtn = document.getElementById("chatbotMic");
-    const closeBtn = document.getElementById("chatbotClose");
-    const panelEl = document.getElementById("chatbotPanel");
-
-    let lastInputWasVoice = false;
-    let inactivityTimer = null;
-
-    function appendMessage(text, sender = "bot") {
-      const wrapper = document.createElement("div");
-      wrapper.className = "chatbot-message " + sender;
-
-      const bubble = document.createElement("div");
-      bubble.className = "chatbot-bubble";
-      bubble.textContent = text;
-
-      wrapper.appendChild(bubble);
-      messagesEl.appendChild(wrapper);
-      messagesEl.scrollTop = messagesEl.scrollHeight;
-    }
-
-    function resetInactivityTimer() {
-      if (inactivityTimer) clearTimeout(inactivityTimer);
-      inactivityTimer = setTimeout(() => {
-        appendMessage(
-          "Souhaites-tu que je t’aide à choisir l’offre la plus adaptée (GPT personnel, Agent AI, storytelling ou visuels photos AI) ?",
-          "bot"
-        );
-      }, 60000); // 1 minute
-    }
-
-    async function sendMessage(message, fromVoice = false) {
-      if (!message.trim()) return;
-
-      lastInputWasVoice = fromVoice;
-      appendMessage(message, "user");
-      inputEl.value = "";
-      resetInactivityTimer();
-
-      try {
-        const response = await fetch("/api/chat", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message }),
-        });
-
-        if (!response.ok) throw new Error("Erreur API");
-
-        const data = await response.json();
-        const reply = data.reply || "Je suis là pour t’aider avec Athy’s Création et ses services AI.";
-
-        appendMessage(reply, "bot");
-
-        // Le bot parle à voix haute UNIQUEMENT si le dernier message vient du micro
-        if (lastInputWasVoice && "speechSynthesis" in window) {
-          const utterance = new SpeechSynthesisUtterance(reply);
-          utterance.lang = "fr-FR";
-          window.speechSynthesis.speak(utterance);
+    <meta charset="UTF-8" />
+    <title>Athy’s Création – AI, Storytelling & Visuels Premium</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" 
+          content="Athy’s Création : GPT personnel privé, Agent AI discret, storytelling professionnel et visuels photos AI (publicitaire, shooting, branding) pour entrepreneurs." />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: radial-gradient(circle at top, #0f172a 0%, #020617 55%, #000 100%);
+            color: #e5e7eb;
         }
-      } catch (e) {
-        appendMessage(
-          "Désolé, un problème technique est survenu. Tu peux aussi utiliser la section Contact plus bas dans la page.",
-          "bot"
-        );
-      }
-    }
+        header {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .btn-main {
+            background: linear-gradient(90deg, #22c55e, #0ea5e9);
+            padding: 14px 28px;
+            border-radius: 40px;
+            color: #020617;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
 
-    sendBtn.addEventListener("click", () => {
-      sendMessage(inputEl.value, false);
-    });
+        /* SECTIONS */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        h2.section-title {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        p.section-subtitle {
+            opacity: 0.7;
+            margin-bottom: 32px;
+        }
 
-    inputEl.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        sendMessage(inputEl.value, false);
-      }
-    });
+        /* SERVICES */
+        .services-grid {
+            display: grid;
+            gap: 20px;
+        }
+        .service-card {
+            background: rgba(255,255,255,0.04);
+            padding: 25px;
+            border-radius: 18px;
+        }
+        .service-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .service-price {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #22c55e;
+        }
 
-    // Micro : reconnaissance vocale (si disponible)
-    micBtn.addEventListener("click", () => {
-      const SpeechRecognition =
-        window.SpeechRecognition || window.webkitSpeechRecognition;
+        /* PORTFOLIO */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+        }
+        .portfolio-card {
+            background: rgba(255,255,255,0.04);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .portfolio-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .portfolio-body {
+            padding: 15px;
+        }
 
-      if (!SpeechRecognition) {
-        appendMessage(
-          "Ton navigateur ne permet pas encore la dictée vocale. Tu peux m’écrire directement ✍️",
-          "bot"
-        );
-        return;
-      }
+        /* CHATBOT */
+        #chatbot {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #0ea5e9;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
 
-      const recognition = new SpeechRecognition();
-      recognition.lang = "fr-FR";
-      recognition.interimResults = false;
-      recognition.maxAlternatives = 1;
+<body>
 
-      recognition.onstart = () => {
-        appendMessage("Je t’écoute… 🎧", "bot");
-      };
+<header>
+    <h1>Athy’s Création</h1>
+    <h3>AI • Storytelling • Visuels Premium</h3>
+    <a href="#contact" class="btn-main">Parler de mon projet</a>
+</header>
 
-      recognition.onerror = () => {
-        appendMessage(
-          "Je n’ai pas bien entendu. Tu peux réessayer ou m’écrire ton message.",
-          "bot"
-        );
-      };
+<!-- SERVICES -->
+<section id="services">
+    <h2 class="section-title">Nos Services</h2>
+    <p class="section-subtitle">Des solutions AI haut de gamme pour ton business.</p>
 
-      recognition.onresult = (event) => {
-        const transcript = event.results[0][0].transcript;
-        sendMessage(transcript, true);
-      };
+    <div class="services-grid">
+        
+        <article class="service-card">
+            <h3 class="service-title">GPT Personnel Privé</h3>
+            <p>Ton GPT personnel, entraîné sur ton activité et ton ton de voix. Idéal pour répondre aux clients, créer du contenu et t’aider dans ton business.</p>
+            <p class="service-price">À partir de 490 €</p>
+        </article>
 
-      recognition.start();
-    });
+        <article class="service-card">
+            <h3 class="service-title">Agent AI Professionnel</h3>
+            <p>Un agent AI 100% discret qui traite, filtre et t’envoie les informations importantes. Ton assistant intelligent.</p>
+            <p class="service-price">À partir de 390 €</p>
+        </article>
 
-    closeBtn.addEventListener("click", () => {
-      panelEl.style.display = "none";
-      setTimeout(() => {
-        panelEl.style.display = "flex";
-      }, 2000);
-    });
+        <article class="service-card">
+            <h3 class="service-title">Storytelling & Portfolio</h3>
+            <p>Récit professionnel + mini-portfolio visuel pour tes réseaux, site, pitch ou lancement.</p>
+            <p class="service-price">À partir de 350 €</p>
+        </article>
 
-    resetInactivityTimer();
-  </script>
+        <article class="service-card">
+            <h3 class="service-title">Visuels Photos AI (Pub, Shooting, Branding)</h3>
+            <p>Création de photos AI premium : campagnes publicitaires, portraits, produits, branding, réseaux sociaux.</p>
+            <p class="service-price">À partir de 420 €</p>
+        </article>
+
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+    <h2 class="section-title">Portfolio Créatif</h2>
+    <p class="section-subtitle">Quelques exemples de styles que nous pouvons créer ensemble.</p>
+
+    <div class="portfolio-grid">
+
+        <article class="portfolio-card">
+            <img src="https://picsum.photos/seed/athys1/900/600" alt="Studio AI">
+            <div class="portfolio-body">
+                <h4>Studio AI</h4>
+                <p>Dashboard + visuels AI premium.</p>
+            </div>
+        </article>
+
+        <article class="portfolio-card">
+            <img src="https://picsum.photos/seed/athys2/900/600" alt="Branding AI">
+            <div class="portfolio-body">
+                <h4>Branding AI</h4>
+                <p>Visuels cohérents pour la marque.</p>
+            </div>
+        </article>
+
+        <article class="portfolio-card">
+            <img src="https://picsum.photos/seed/athys3/900/600" alt="Shooting AI">
+            <div class="portfolio-body">
+                <h4>Shooting publicitaire</h4>
+                <p>Produits & services en version premium.</p>
+            </div>
+        </article>
+
+        <article class="portfolio-card">
+            <img src="https://picsum.photos/seed/athys4/900/600" alt="Storytelling AI vidéo">
+            <div class="portfolio-body">
+                <h4>Storytelling Vidéo AI</h4>
+                <p>Mini-clips narratifs pour réseaux.</p>
+            </div>
+        </article>
+
+        <article class="portfolio-card">
+            <img src="https://picsum.photos/seed/athys5/900/600" alt="Storytelling Texte AI">
+            <div class="portfolio-body">
+                <h4>Storytelling Texte AI</h4>
+                <p>Récit professionnel + structuration.</p>
+            </div>
+        </article>
+
+        <article class="portfolio-card">
+            <img src="https://picsum.photos/seed/athys6/900/600" alt="Mix Créatif AI">
+            <div class="portfolio-body">
+                <h4>Créations Hybrides AI</h4>
+                <p>Mix visuel + texte + branding AI.</p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- CHATBOT -->
+<div id="chatbot">💬</div>
+
 </body>
 </html>
-<!--uptade-->
