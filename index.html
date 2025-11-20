@@ -2,15 +2,14 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Athy’s Création – AI & Storytelling premium</title>
+  <title>Athy’s Création – AI, Storytelling & Visuels premium</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Athy’s Création – GPT personnels, Agent AI discret, storytelling premium et visuels photos AI (publicitaire, shooting, branding) pour entrepreneurs."
+    content="Athy’s Création : GPT personnel privé, Agent AI discret, storytelling professionnel et visuels photos AI (publicitaire, shooting, branding) pour entrepreneurs."
   />
 
   <style>
-    /* -------------------- BASE -------------------- */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -20,7 +19,7 @@
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, sans-serif;
-      background: radial-gradient(circle at top, #10253f 0, #020617 55%, #000 100%);
+      background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000 100%);
       color: #e5e7eb;
       line-height: 1.6;
       scroll-behavior: smooth;
@@ -43,13 +42,13 @@
       padding: 0 16px;
     }
 
-    /* -------------------- HEADER -------------------- */
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
       z-index: 50;
       backdrop-filter: blur(14px);
-      background: linear-gradient(to right, #020617dd, #020617dd);
+      background: rgba(15, 23, 42, 0.95);
       border-bottom: 1px solid #1f2937;
     }
 
@@ -85,7 +84,7 @@
     }
 
     .logo-text-title {
-      letter-spacing: 0.12em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       font-size: 11px;
       color: #e5e7eb;
@@ -104,7 +103,6 @@
     }
 
     nav a {
-      color: #e5e7eb;
       border-bottom: 1px solid transparent;
       padding-bottom: 4px;
     }
@@ -121,13 +119,13 @@
       font-weight: 600;
       cursor: pointer;
       background: radial-gradient(circle at 0 0, #4ade80, #22c55e, #0ea5e9);
-      box-shadow: 0 0 40px rgba(34, 197, 94, 0.35);
+      box-shadow: 0 0 30px rgba(34, 197, 94, 0.4);
       color: #020617;
     }
 
-    /* -------------------- HERO -------------------- */
+    /* HERO */
     .hero {
-      padding: 60px 0 36px;
+      padding: 56px 0 40px;
     }
 
     .hero-grid {
@@ -147,7 +145,6 @@
     .hero-title {
       font-size: clamp(30px, 4vw, 40px);
       font-weight: 700;
-      color: #e5e7eb;
       margin-bottom: 8px;
     }
 
@@ -161,14 +158,14 @@
     .hero-subtitle {
       font-size: 14px;
       color: #9ca3af;
-      max-width: 460px;
-      margin-bottom: 22px;
+      max-width: 470px;
+      margin-bottom: 20px;
     }
 
     .hero-badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
       margin-bottom: 18px;
     }
 
@@ -176,16 +173,15 @@
       font-size: 11px;
       padding: 6px 11px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.95);
       border: 1px solid #1f2937;
-      color: #e5e7eb;
     }
 
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .btn-main {
@@ -197,14 +193,14 @@
       font-weight: 600;
       background: radial-gradient(circle at 0 0, #4ade80, #22c55e, #0ea5e9);
       color: #020617;
-      box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
     }
 
     .btn-ghost {
       padding: 10px 18px;
       border-radius: 999px;
       border: 1px solid #374151;
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.95);
       color: #e5e7eb;
       cursor: pointer;
       font-size: 14px;
@@ -215,15 +211,12 @@
       color: #6b7280;
     }
 
-    /* Dashboard bloc à droite */
     .hero-dashboard {
       background: radial-gradient(circle at 0 0, #1f2937, #020617 70%);
-      border-radius: 26px;
+      border-radius: 24px;
       border: 1px solid #1f2937;
-      padding: 18px 18px 16px;
-      box-shadow: 0 30px 80px rgba(15, 23, 42, 0.8);
-      position: relative;
-      overflow: hidden;
+      padding: 18px;
+      box-shadow: 0 30px 80px rgba(15, 23, 42, 0.9);
     }
 
     .hero-dashboard-header {
@@ -242,16 +235,16 @@
       font-size: 11px;
       padding: 4px 10px;
       border-radius: 999px;
-      background: rgba(15, 118, 110, 0.25);
-      color: #a5f3fc;
-      border: 1px solid rgba(34, 211, 238, 0.4);
+      background: rgba(34, 197, 94, 0.16);
+      border: 1px solid rgba(34, 197, 94, 0.5);
+      color: #bbf7d0;
     }
 
     .hero-dashboard-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .small-card {
@@ -270,7 +263,8 @@
     }
 
     .small-card span {
-      font-size: 11px;
+      display: block;
+      margin-top: 4px;
       color: #22c55e;
     }
 
@@ -278,7 +272,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
     }
 
     .hero-tag {
@@ -286,14 +280,14 @@
       padding: 4px 9px;
       border-radius: 999px;
       border: 1px solid #374151;
+      background: rgba(15, 23, 42, 0.95);
       color: #9ca3af;
-      background: rgba(15, 23, 42, 0.9);
     }
 
     .hero-stats {
       display: flex;
       justify-content: space-between;
-      margin-top: 10px;
+      gap: 8px;
       font-size: 11px;
       color: #9ca3af;
     }
@@ -304,7 +298,7 @@
       color: #e5e7eb;
     }
 
-    /* -------------------- SECTION TITLES -------------------- */
+    /* SECTIONS */
     section {
       padding: 40px 0;
     }
@@ -317,14 +311,14 @@
     .section-subtitle {
       font-size: 13px;
       color: #9ca3af;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    /* -------------------- SERVICES -------------------- */
+    /* SERVICES */
     .chips-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
       margin-bottom: 18px;
     }
 
@@ -332,9 +326,8 @@
       font-size: 11px;
       padding: 6px 12px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.95);
+      background: rgba(15, 23, 42, 0.96);
       border: 1px solid #1f2937;
-      color: #e5e7eb;
     }
 
     .services-grid {
@@ -346,17 +339,15 @@
     .service-card {
       border-radius: 18px;
       padding: 16px;
-      background: rgba(15, 23, 42, 0.96);
+      background: rgba(15, 23, 42, 0.97);
       border: 1px solid #1f2937;
-      position: relative;
-      overflow: hidden;
     }
 
     .service-tag {
       font-size: 10px;
       padding: 4px 8px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.96);
+      background: rgba(15, 23, 42, 0.98);
       border: 1px solid #374151;
       color: #9ca3af;
       display: inline-block;
@@ -371,7 +362,7 @@
     .service-text {
       font-size: 13px;
       color: #9ca3af;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     .service-price {
@@ -387,18 +378,19 @@
       border: 1px solid #1f2937;
     }
 
-    /* -------------------- TARIFS -------------------- */
+    /* TARIFS */
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
+      gap: 16px;
     }
 
     .pricing-card {
       border-radius: 20px;
       padding: 18px;
-      background: rgba(15, 23, 42, 0.96);
+      background: rgba(15, 23, 42, 0.97);
       border: 1px solid #1f2937;
+      font-size: 13px;
     }
 
     .pricing-title {
@@ -410,24 +402,23 @@
       font-size: 11px;
       padding: 4px 9px;
       border-radius: 999px;
-      background: rgba(22, 163, 74, 0.18);
+      background: rgba(34, 197, 94, 0.16);
       border: 1px solid rgba(34, 197, 94, 0.4);
       color: #bbf7d0;
       display: inline-block;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .pricing-price {
       font-size: 18px;
       font-weight: 700;
-      margin-bottom: 6px;
-      color: #e5e7eb;
+      margin-bottom: 4px;
     }
 
     .pricing-note {
       font-size: 11px;
       color: #9ca3af;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .pricing-list {
@@ -441,23 +432,23 @@
       color: #22c55e;
     }
 
-    /* -------------------- PORTFOLIO -------------------- */
+    /* PORTFOLIO */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
+      gap: 16px;
     }
 
     .portfolio-card {
       border-radius: 18px;
       overflow: hidden;
-      background: rgba(15, 23, 42, 0.96);
+      background: rgba(15, 23, 42, 0.97);
       border: 1px solid #1f2937;
     }
 
     .portfolio-card img {
-      height: 160px;
       width: 100%;
+      height: 160px;
       object-fit: cover;
     }
 
@@ -473,7 +464,7 @@
       color: #e5e7eb;
     }
 
-    /* -------------------- CONTACT -------------------- */
+    /* CONTACT */
     .contact-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
@@ -483,7 +474,7 @@
     .contact-card {
       border-radius: 20px;
       padding: 18px;
-      background: rgba(15, 23, 42, 0.96);
+      background: rgba(15, 23, 42, 0.97);
       border: 1px solid #1f2937;
       font-size: 13px;
       color: #9ca3af;
@@ -534,41 +525,9 @@
       font-weight: 600;
     }
 
-    /* -------------------- FOOTER -------------------- */
-    footer {
-      padding: 22px 0 26px;
-      border-top: 1px solid #111827;
-      margin-top: 24px;
-      font-size: 11px;
-      color: #6b7280;
-      text-align: center;
-    }
-
-    /* -------------------- CHATBOT -------------------- */
+    /* CHATBOT */
     .chatbot-wrapper {
-      margin-top: 26px;
-    }
-
-    .chatbot-tab-row {
-      display: flex;
-      gap: 14px;
-      margin-bottom: 14px;
-    }
-
-    .chatbot-tab {
-      border-radius: 999px;
-      padding: 6px 14px;
-      font-size: 12px;
-      border: 1px solid #1f2937;
-      background: rgba(15, 23, 42, 0.9);
-      color: #9ca3af;
-    }
-
-    .chatbot-tab.active {
-      background: radial-gradient(circle at 0 0, #4ade80, #22c55e, #0ea5e9);
-      color: #020617;
-      border: none;
-      font-weight: 600;
+      margin-top: 30px;
     }
 
     .chatbot-panel {
@@ -579,7 +538,6 @@
       display: flex;
       flex-direction: column;
       height: 340px;
-      position: relative;
     }
 
     .chatbot-header {
@@ -705,16 +663,21 @@
       color: #6b7280;
     }
 
-    /* -------------------- RESPONSIVE -------------------- */
+    /* FOOTER */
+    footer {
+      padding: 22px 0 26px;
+      border-top: 1px solid #111827;
+      margin-top: 24px;
+      font-size: 11px;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero-grid {
         grid-template-columns: minmax(0, 1fr);
       }
-
-      .hero-dashboard {
-        margin-top: 10px;
-      }
-
       nav ul {
         display: none;
       }
@@ -724,20 +687,17 @@
       .contact-grid {
         grid-template-columns: minmax(0, 1fr);
       }
-
       .hero {
-        padding-top: 36px;
+        padding-top: 34px;
       }
-
       .chatbot-panel {
         height: 360px;
       }
     }
   </style>
 </head>
-
 <body>
-  <!-- ==================== HEADER ==================== -->
+  <!-- HEADER -->
   <header>
     <div class="container">
       <div class="navbar">
@@ -745,7 +705,7 @@
           <div class="logo-circle">A</div>
           <div class="logo-text">
             <div class="logo-text-title">ATHY’S CRÉATION</div>
-            <div class="logo-text-sub">AI • Storytelling • Image premium</div>
+            <div class="logo-text-sub">AI • Storytelling • Visuels premium</div>
           </div>
         </div>
 
@@ -759,51 +719,49 @@
           </ul>
         </nav>
 
-        <button class="cta-top" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        <button class="cta-top" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
           Parler de mon projet
         </button>
       </div>
     </div>
   </header>
 
-  <!-- ==================== HERO ==================== -->
+  <!-- HERO -->
   <main id="accueil">
     <section class="hero">
       <div class="container hero-grid">
-        <!-- Colonne gauche -->
         <div>
-          <div class="hero-kicker">Pour les entrepreneurs exigeants</div>
+          <div class="hero-kicker">Pour entrepreneurs & créateurs exigeants</div>
           <h1 class="hero-title">
-            Storytelling <span>professionnel</span>
+            AI, storytelling & visuels <span>au service de ta marque</span>
           </h1>
           <p class="hero-subtitle">
-            Athy’s Création t’accompagne pour créer ton GPT personnel, installer ton Agent AI discret, écrire des textes
-            professionnels
-            et structurer ton image de marque premium, avec des visuels photos AI sur-mesure.
+            Athy’s Création t’accompagne pour construire un univers clair et premium :
+            GPT personnel privé, Agent AI discret, textes professionnels et visuels photos AI pour ta communication.
           </p>
 
           <div class="hero-badges">
-            <div class="hero-badge">GPT personnel privé</div>
+            <div class="hero-badge">GPT personnel privé AI</div>
             <div class="hero-badge">Agent AI discret</div>
-            <div class="hero-badge">Storytelling & visuels AI</div>
+            <div class="hero-badge">Storytelling & portfolio</div>
+            <div class="hero-badge">Photos publicitaires AI</div>
           </div>
 
           <div class="hero-buttons">
-            <button class="btn-main" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
-              Voir les services
+            <button class="btn-main" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+              Découvrir les offres
             </button>
-            <button class="btn-ghost" onclick="document.getElementById('tarifs').scrollIntoView({behavior: 'smooth'})">
-              Découvrir les tarifs
+            <button class="btn-ghost" onclick="document.getElementById('tarifs').scrollIntoView({behavior:'smooth'})">
+              Voir les tarifs
             </button>
           </div>
 
           <p class="hero-note">
-            1 studio, 1 interlocuteur, 75% de clarté en plus sur ton positionnement.
+            1 studio, 1 interlocuteur, pour clarifier ton image et ta communication.
           </p>
         </div>
 
-        <!-- Colonne droite - Dashboard -->
-        <aside class="hero-dashboard" aria-label="Tableau de bord Athy’s AI">
+        <aside class="hero-dashboard" aria-label="Dashboard Athy’s Création">
           <div class="hero-dashboard-header">
             <div class="hero-dashboard-title">Dashboard Athy’s AI</div>
             <div class="hero-dashboard-pill">Studio AI & Storytelling</div>
@@ -811,138 +769,136 @@
 
           <div class="hero-dashboard-grid">
             <div class="small-card">
-              <h4>GPT personnel</h4>
-              <p>Ton AI privée, entraînée sur ton expertise et ton ton de voix.</p>
-              <span>• Configuré sur mesure</span>
+              <h4>GPT personnel AI</h4>
+              <p>Un GPT privé, réglé sur ton activité, ton ton et tes offres.</p>
+              <span>Ton copilote au quotidien.</span>
             </div>
             <div class="small-card">
               <h4>Agent AI discret</h4>
-              <p>Un manager AI qui travaille 24/7 en coulisse pour ton activité.</p>
-              <span>• Jamais intrusif pour tes clients</span>
+              <p>Un agent AI qui t’aide en coulisse dans ta gestion et tes réponses.</p>
+              <span>Invisible pour tes clients.</span>
             </div>
           </div>
 
           <div class="hero-tag-row">
-            <div class="hero-tag">Storytelling & texte premium</div>
+            <div class="hero-tag">Storytelling & textes pro</div>
             <div class="hero-tag">Visuels photos AI de marque</div>
-            <div class="hero-tag">Création de portfolio pro</div>
+            <div class="hero-tag">Portfolio & image premium</div>
           </div>
 
           <div class="hero-stats">
             <div>
               <strong>3 piliers</strong>
-              GPT personnel, Agent AI discret, image de marque.
+              GPT personnel, Agent AI, image de marque.
             </div>
             <div>
               <strong>Accompagnement</strong>
-              1 projet à la fois, pour un suivi personnalisé.
+              Pour entrepreneurs qui veulent une présence claire et cohérente.
             </div>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- ==================== SERVICES ==================== -->
+    <!-- SERVICES -->
     <section id="services">
       <div class="container">
-        <h2 class="section-title">Services</h2>
+        <h2 class="section-title">Services Athy’s Création</h2>
         <p class="section-subtitle">
-          Tous les services premium AI & storytelling proposés par Athy’s Création pour entrepreneurs.
+          Des offres pensées pour clarifier ton message, automatiser intelligemment et renforcer ton image grâce à l’AI.
         </p>
 
         <div class="chips-row">
           <span class="chip">GPT personnel privé</span>
           <span class="chip">Agent AI discret</span>
           <span class="chip">Storytelling & textes pro</span>
-          <span class="chip">Visuels photos AI • Pub & branding</span>
+          <span class="chip">Photos publicitaires & branding AI</span>
         </div>
 
         <div class="services-grid">
-          <!-- GPT personnel -->
+          <!-- GPT personnel AI -->
           <article class="service-card">
             <div class="service-tag">AI sur mesure</div>
-            <h3 class="service-title">GPT personnel privé</h3>
+            <h3 class="service-title">GPT personnel privé AI</h3>
             <p class="service-text">
-              Ton GPT personnel, entraîné sur ton activité, tes offres et ton ton de voix. Idéal pour répondre à tes
-              clients, créer du contenu ou
-              te servir de copilote dans ton business.
+              Création de ton propre GPT, entraîné sur ton activité, ton ton de voix, tes offres,
+              pour t’aider à répondre, créer du contenu et structurer tes idées.
             </p>
             <p class="service-price">À partir de 390 €</p>
             <div class="service-img">
-              <img src="https://picsum.photos/seed/athys-gpt/800/450" alt="Interface GPT personnel Athy’s Création" />
+              <img src="https://picsum.photos/seed/athys-gpt/800/450"
+                   alt="Interface GPT personnel AI pour entrepreneur" />
             </div>
           </article>
 
-          <!-- Agent AI discret -->
+          <!-- Agent AI -->
           <article class="service-card">
             <div class="service-tag">Agent AI discret</div>
-            <h3 class="service-title">Agent AI professionnel</h3>
+            <h3 class="service-title">Agent AI de gestion</h3>
             <p class="service-text">
-              Un Manager AI qui travaille pour toi en coulisse : suivi de demandes, pré-rédaction de réponses, aide à la
-              gestion de tâches.
-              Toujours discret, jamais intrusif pour tes clients.
+              Un Agent AI configuré pour t’aider à suivre les demandes, proposer des réponses,
+              t’assister dans ta gestion quotidienne. Toujours discret, jamais visible côté client.
             </p>
             <p class="service-price">À partir de 490 €</p>
             <div class="service-img">
-              <img src="https://picsum.photos/seed/athys-agent/800/450" alt="Agent AI discret en action" />
+              <img src="https://picsum.photos/seed/athys-agent/800/450"
+                   alt="Agent AI discret pour gestion d’activité" />
             </div>
           </article>
 
           <!-- Storytelling -->
           <article class="service-card">
             <div class="service-tag">Storytelling & textes</div>
-            <h3 class="service-title">Storytelling professionnel</h3>
+            <h3 class="service-title">Storytelling & Portfolio</h3>
             <p class="service-text">
-              Structurer ton histoire de marque, clarifier tes offres, écrire des textes clairs et mémorables pour ton
-              site, tes pages de vente
-              ou ton portfolio.
+              Clarification de ton histoire, de tes offres, de ton positionnement.
+              Textes professionnels pour ton site, ton portfolio ou ta page de présentation.
             </p>
             <p class="service-price">À partir de 350 €</p>
             <div class="service-img">
-              <img src="https://picsum.photos/seed/athys-story/800/450" alt="Storytelling pour marque premium" />
+              <img src="https://picsum.photos/seed/athys-story/800/450"
+                   alt="Storytelling professionnel pour marque" />
             </div>
           </article>
 
-          <!-- NOUVELLE OFFRE – Visuels photos AI -->
+          <!-- Visuels photos AI -->
           <article class="service-card">
             <div class="service-tag">Visuels photos AI</div>
             <h3 class="service-title">Photos publicitaires, shooting & branding AI</h3>
             <p class="service-text">
-              Création de visuels photos AI pour ta marque : campagnes publicitaires, shooting de produits, portraits
-              branding, bannières et
-              visuels réseaux sociaux. Cohérents avec ton univers et ton positionnement.
+              Création de visuels photos AI pour renforcer ton image :
+              publicités, shooting produits, portraits branding, bannières et visuels réseaux sociaux.
             </p>
             <p class="service-price">À partir de 420 €</p>
             <div class="service-img">
               <img src="https://picsum.photos/seed/athys-photos/800/450"
-                alt="Visuels photos AI pour publicité et branding de marque" />
+                   alt="Visuels photos AI pour publicité et branding" />
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ==================== TARIFS ==================== -->
+    <!-- TARIFS -->
     <section id="tarifs">
       <div class="container">
         <h2 class="section-title">Tarifs</h2>
         <p class="section-subtitle">
-          Des offres claires, pensées pour les entrepreneurs qui veulent une image cohérente, des outils AI efficaces et
-          un accompagnement humain.
+          Des offres claires pour bâtir un écosystème AI et une image de marque solide autour de ton activité.
         </p>
 
         <div class="pricing-grid">
           <!-- GPT -->
           <article class="pricing-card">
-            <div class="pricing-badge">GPT personnel privé</div>
+            <div class="pricing-badge">GPT personnel AI</div>
             <h3 class="pricing-title">Pack GPT Athy’s</h3>
             <p class="pricing-price">390 €</p>
-            <p class="pricing-note">Configuration complète de ton GPT personnel privé.</p>
+            <p class="pricing-note">Création et configuration de ton GPT personnel privé.</p>
             <ul class="pricing-list">
-              <li>Analyse de ton activité et de tes offres.</li>
-              <li>Paramétrage du GPT avec ton ton de voix.</li>
-              <li>Tests & ajustements pour tes cas d’usage.</li>
-              <li>Mini-guide vidéo ou écrit pour l’utiliser.</li>
+              <li>Analyse de ton activité et de tes objectifs.</li>
+              <li>Paramétrage complet du GPT avec ton ton de voix.</li>
+              <li>Scénarios d’utilisation personnalisés.</li>
+              <li>Guide d’utilisation simple.</li>
             </ul>
           </article>
 
@@ -951,11 +907,11 @@
             <div class="pricing-badge">Agent AI discret</div>
             <h3 class="pricing-title">Pack Manager AI</h3>
             <p class="pricing-price">490 €</p>
-            <p class="pricing-note">Un agent AI discret qui travaille pour toi 24/7.</p>
+            <p class="pricing-note">Un Agent AI discret qui travaille pour toi en coulisse.</p>
             <ul class="pricing-list">
               <li>Définition des tâches à automatiser.</li>
               <li>Création de l’agent AI (règles + ton).</li>
-              <li>Scénarios de réponses & modèles de messages.</li>
+              <li>Modèles de réponses & scénarios d’aide.</li>
               <li>Support de prise en main.</li>
             </ul>
           </article>
@@ -965,103 +921,108 @@
             <div class="pricing-badge">Storytelling & textes</div>
             <h3 class="pricing-title">Pack Storytelling & Portfolio</h3>
             <p class="pricing-price">350 €</p>
-            <p class="pricing-note">Clarifier ton histoire, tes offres et ta page de présentation.</p>
+            <p class="pricing-note">Clarifier ton histoire, ton offre et ton message.</p>
             <ul class="pricing-list">
               <li>Storytelling de marque structuré.</li>
-              <li>Texte de page d’accueil ou de présentation.</li>
-              <li>Axe de communication pour réseaux sociaux.</li>
-              <li>Conseils de cohérence d’image.</li>
+              <li>Texte pour page d’accueil ou présentation.</li>
+              <li>Axe éditorial pour ta communication.</li>
+              <li>Conseils sur la cohérence de ton image.</li>
             </ul>
           </article>
 
-          <!-- NOUVELLE OFFRE VISUELS AI -->
+          <!-- Visuels photos AI -->
           <article class="pricing-card">
             <div class="pricing-badge">Visuels photos AI</div>
-            <h3 class="pricing-title">Pack Photos publicitaires & Branding AI</h3>
+            <h3 class="pricing-title">Pack Photos pub & branding AI</h3>
             <p class="pricing-price">420 €</p>
             <p class="pricing-note">
-              Visuels photos AI de marque pour publicité, shooting et réseaux sociaux.
+              Visuels photos AI pour publicité, shooting produit ou image personnelle.
             </p>
             <ul class="pricing-list">
-              <li>Jusqu’à 12 visuels photos AI (pub, produits, portraits, bannières).</li>
-              <li>Palette de couleurs cohérente avec ta marque.</li>
+              <li>Jusqu’à 12 visuels AI (pub, produits, portraits).</li>
+              <li>Couleurs et ambiance alignées à ta marque.</li>
               <li>Formats optimisés pour site & réseaux sociaux.</li>
-              <li>1 série de retouches / ajustements incluse.</li>
+              <li>1 série d’ajustements incluse.</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ==================== PORTFOLIO ====================  -->
+    <!-- PORTFOLIO -->
     <section id="portfolio">
       <div class="container">
         <h2 class="section-title">Portfolio Créatif</h2>
         <p class="section-subtitle">
-          Quelques exemples de styles que nous pouvons créer ensemble avec Athy’s Création (textes & visuels AI).
+          Aperçu de styles que nous pouvons créer ensemble : studio AI, storytelling, branding et visuels publicitaires.
         </p>
 
         <div class="portfolio-grid">
           <article class="portfolio-card">
             <img src="https://picsum.photos/seed/athys-studio/900/600"
-              alt="Visuel AI d’un studio créatif pour entrepreneurs" />
+                 alt="Studio AI créatif pour entrepreneurs" />
             <div class="portfolio-body">
               <h4>Studio AI pour entrepreneurs</h4>
-              <p>Dashboard AI + textes clairs pour présenter ton offre premium.</p>
+              <p>Dashboard AI + textes pro pour présenter ton offre de façon claire.</p>
             </div>
           </article>
 
-          <article class="portfolio-card"><article class="portfolio-card">
-    <img src="https://picsum.photos/seed/athys-story1/900/600"
-         alt="Storytelling AI pour vidéo publicitaire" />
-    <div class="portfolio-body">
-        <h4>Storytelling vidéo AI</h4>
-        <p>Scénario émotionnel pour vidéos publicitaires, avec visuels AI alignés à ta marque.</p>
-    </div>
-</article>
-
-<article class="portfolio-card">
-    <img src="https://picsum.photos/seed/athys-story2/900/600"
-         alt="Storytelling AI pour réseaux sociaux" />
-    <div class="portfolio-body">
-        <h4>Storytelling réseaux sociaux</h4>
-        <p>Séries de posts et visuels AI cohérents pour raconter ton histoire sur les réseaux.</p>
-    </div>
-</article>
-
-            <img src="https://picsum.photos/seed/athys-brand/900/600"
-              alt="Branding visuel AI pour marque personnelle" />
+          <article class="portfolio-card">
+            <img src="https://picsum.photos/seed/athys-story1/900/600"
+                 alt="Storytelling AI pour vidéo" />
             <div class="portfolio-body">
-              <h4>Branding personnel AI</h4>
-              <p>Visuels AI pour ta marque personnelle, cohérents sur tous les supports.</p>
+              <h4>Storytelling vidéo AI</h4>
+              <p>Scénarios AI pour vidéos publicitaires ou teaser de lancement.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img src="https://picsum.photos/seed/athys-story2/900/600"
+                 alt="Storytelling AI pour réseaux sociaux" />
+            <div class="portfolio-body">
+              <h4>Storytelling réseaux sociaux</h4>
+              <p>Carrousels + textes AI pour raconter ton histoire en plusieurs slides.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img src="https://picsum.photos/seed/athys-brand/900/600"
+                 alt="Branding AI pour marque personnelle" />
+            <div class="portfolio-body">
+              <h4>Branding AI</h4>
+              <p>Visuels AI qui reflètent ton univers et ta personnalité de marque.</p>
             </div>
           </article>
 
           <article class="portfolio-card">
             <img src="https://picsum.photos/seed/athys-shooting/900/600"
-              alt="Shooting publicitaire AI pour produit ou service" />
+                 alt="Shooting publicitaire AI" />
             <div class="portfolio-body">
               <h4>Shooting publicitaire AI</h4>
               <p>Photos AI pour mettre en valeur un produit, une offre ou un événement.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img src="https://picsum.photos/seed/athys-social/900/600"
+                 alt="Visuels AI pour réseaux sociaux" />
+            <div class="portfolio-body">
+              <h4>Visuels AI pour réseaux</h4>
+              <p>Pack d’images AI prêtes à poster pour ta communication quotidienne.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ==================== CHATBOT ==================== -->
+    <!-- CHATBOT -->
     <section>
       <div class="container chatbot-wrapper">
-        <div class="chatbot-tab-row">
-          <div class="chatbot-tab active">Pour entrepreneurs</div>
-          <div class="chatbot-tab">AI & storytelling sur-mesure</div>
-        </div>
-
         <div class="chatbot-panel" id="chatbotPanel">
           <div class="chatbot-header">
             <div class="chatbot-header-title">
               Chaton Athy’s
-              <span>Assistant AI du site</span>
+              <span>Assistant AI du site (texte & micro)</span>
             </div>
             <button class="chatbot-close" type="button" id="chatbotClose">×</button>
           </div>
@@ -1069,54 +1030,50 @@
           <div class="chatbot-messages" id="chatbotMessages">
             <div class="chatbot-message bot">
               <div class="chatbot-bubble">
-                Bonjour 👋 Je suis Chaton Athy’s. Tu peux m’écrire ou utiliser le micro 🎤.  
-                Je t’aide à comprendre les offres GPT personnel, Agent AI et storytelling,
-                ainsi que les visuels photos AI.
+                Bonjour 👋 Je suis Chaton Athy’s. Tu peux m’écrire ou utiliser le micro 🎤.
+                Je t’aide à comprendre les offres (GPT personnel, Agent AI, storytelling, photos publicitaires AI…).
               </div>
             </div>
             <div class="chatbot-message bot">
               <div class="chatbot-bubble">
-                Tu peux par exemple m’écrire :  
-                <strong>“Explique-moi les services Athy’s Création”</strong> ou  
-                <strong>“Je veux des visuels photos AI pour ma marque.”</strong>
+                Si tu écris, je réponds uniquement par écrit.  
+                Si tu parles avec le micro, je peux aussi te répondre à voix haute.
               </div>
             </div>
           </div>
 
           <div class="chatbot-footer">
             <div class="chatbot-input-row">
-              <button class="chatbot-mic" id="chatbotMic" type="button" title="Parler">
+              <button class="chatbot-mic" id="chatbotMic" type="button" title="Parler avec le micro">
                 🎤
               </button>
-              <input id="chatbotInput" class="chatbot-input" placeholder="Écris ton message…" />
+              <input id="chatbotInput" class="chatbot-input" placeholder="Écris ton message ici…" />
               <button class="chatbot-send" id="chatbotSend" type="button">
                 Envoyer
               </button>
             </div>
             <div class="chatbot-rule">
-              Règle : je parle à voix haute seulement si tu utilises le micro 🎤. Si tu écris, je réponds uniquement
-              par écrit.
+              Règles : je réponds par écrit à tes messages. Je parle à voix haute uniquement si tu utilises le micro 🎤.
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== CONTACT ==================== -->
+    <!-- CONTACT -->
     <section id="contact">
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <p class="section-subtitle">
-          Tu as un projet GPT, Agent AI, storytelling ou visuels photos AI pour ta marque ? Parlons-en.
+          Tu as un projet GPT, Agent AI, storytelling ou visuels photos AI pour ta marque ?
+          Partage quelques informations, Athy’s Création reviendra vers toi.
         </p>
 
         <div class="contact-grid">
           <div class="contact-card">
             <h3>Parler de ton projet</h3>
             <p>
-              Décris ton projet en quelques lignes : où tu en es, ce que tu veux créer (GPT, Agent AI, textes,
-              visuels AI…) et pour quel type de
-              clients.
+              Décris ton activité, ton projet, et ce que tu aimerais créer avec Athy’s Création.
             </p>
 
             <form>
@@ -1131,7 +1088,7 @@
               <div class="contact-field">
                 <label for="message">Ton message</label>
                 <textarea id="message" name="message"
-                  placeholder="Parle-moi de ton projet, de ton activité et de ce que tu veux créer."></textarea>
+                  placeholder="Parle-moi de ton projet : GPT, Agent AI, storytelling, visuels AI…"></textarea>
               </div>
               <button type="button" class="contact-submit">
                 Envoyer ma demande
@@ -1140,23 +1097,22 @@
           </div>
 
           <div class="contact-card">
-            <h3>Infos pratiques</h3>
+            <h3>Informations pratiques</h3>
             <p>
-              Athy’s Création accompagne les entrepreneurs, indépendants et petites équipes qui veulent une image
-              cohérente, des outils AI
-              efficaces et un storytelling clair.
+              Athy’s Création accompagne les entrepreneurs, indépendants et petites équipes
+              qui veulent une image claire, des outils AI efficaces et un storytelling professionnel.
             </p>
             <div class="contact-field">
               <label>Services principaux</label>
               <p>
-                • GPT personnel privé  
-                • Agent AI discret  
-                • Storytelling & textes de marque  
-                • Visuels photos AI (publicitaire, shooting, branding)
+                • GPT personnel privé AI<br />
+                • Agent AI discret (en coulisse)<br />
+                • Storytelling & textes de marque<br />
+                • Visuels photos AI : publicité, shooting, branding
               </p>
             </div>
             <div class="contact-field">
-              <label>Réponse</label>
+              <label>Délai de réponse</label>
               <p>
                 Athy’s Création s’occupe de ta demande et te répond dans un délai de 24 heures (jours ouvrés).
               </p>
@@ -1167,14 +1123,14 @@
     </section>
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       © Athy’s Création – Studio AI & Storytelling. Tous droits réservés.
     </div>
   </footer>
 
-  <!-- ==================== SCRIPT CHATBOT ==================== -->
+  <!-- SCRIPT CHATBOT -->
   <script>
     const messagesEl = document.getElementById("chatbotMessages");
     const inputEl = document.getElementById("chatbotInput");
@@ -1203,7 +1159,7 @@
       if (inactivityTimer) clearTimeout(inactivityTimer);
       inactivityTimer = setTimeout(() => {
         appendMessage(
-          "Tu veux que je t’aide à choisir l’offre la plus adaptée (GPT, Agent AI, storytelling ou visuels photos AI) ?",
+          "Souhaites-tu que je t’aide à choisir l’offre la plus adaptée (GPT personnel, Agent AI, storytelling ou visuels photos AI) ?",
           "bot"
         );
       }, 60000); // 1 minute
@@ -1227,11 +1183,11 @@
         if (!response.ok) throw new Error("Erreur API");
 
         const data = await response.json();
-        const reply = data.reply || "Je suis là pour t’aider avec les offres Athy’s Création.";
+        const reply = data.reply || "Je suis là pour t’aider avec Athy’s Création et ses services AI.";
 
         appendMessage(reply, "bot");
 
-        // Si le client a parlé via le micro, le bot peut répondre à voix haute.
+        // Le bot parle à voix haute UNIQUEMENT si le dernier message vient du micro
         if (lastInputWasVoice && "speechSynthesis" in window) {
           const utterance = new SpeechSynthesisUtterance(reply);
           utterance.lang = "fr-FR";
@@ -1239,7 +1195,7 @@
         }
       } catch (e) {
         appendMessage(
-          "Désolé, un problème technique est survenu. Tu peux aussi passer par le formulaire de contact.",
+          "Désolé, un problème technique est survenu. Tu peux aussi utiliser la section Contact plus bas dans la page.",
           "bot"
         );
       }
@@ -1293,7 +1249,6 @@
       recognition.start();
     });
 
-    // Bouton de fermeture du panneau (visuel seulement, le bot reste dans la page)
     closeBtn.addEventListener("click", () => {
       panelEl.style.display = "none";
       setTimeout(() => {
@@ -1301,7 +1256,6 @@
       }, 2000);
     });
 
-    // Démarre le timer d’inactivité
     resetInactivityTimer();
   </script>
 </body>
