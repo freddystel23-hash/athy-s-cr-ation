@@ -1,213 +1,847 @@
 !DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <title>Athy’s Création – AI, Storytelling & Visuels Premium</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" 
-          content="Athy’s Création : GPT personnel privé, Agent AI discret, storytelling professionnel et visuels photos AI (publicitaire, shooting, branding) pour entrepreneurs." />
+  <meta charset="UTF-8" />
+  <title>Athy’s Création – IA, Storytelling & Visuels premium</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Athy’s Création : GPT personnel privé, agent IA discret, storytelling professionnel et visuels photos IA (publicitaire, shooting, branding) pour entrepreneurs."
+  />
 
-    <style>
-        body {
-            margin: 0;
-            font-family: system-ui, sans-serif;
-            background: radial-gradient(circle at top, #0f172a 0%, #020617 55%, #000 100%);
-            color: #e5e7eb;
-        }
-        header {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-        }
-        .btn-main {
-            background: linear-gradient(90deg, #22c55e, #0ea5e9);
-            padding: 14px 28px;
-            border-radius: 40px;
-            color: #020617;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* SECTIONS */
-        section {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
-        h2.section-title {
-            font-size: 28px;
-            margin-bottom: 12px;
-        }
-        p.section-subtitle {
-            opacity: 0.7;
-            margin-bottom: 32px;
-        }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000 100%);
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
 
-        /* SERVICES */
-        .services-grid {
-            display: grid;
-            gap: 20px;
-        }
-        .service-card {
-            background: rgba(255,255,255,0.04);
-            padding: 25px;
-            border-radius: 18px;
-        }
-        .service-title {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        .service-price {
-            margin-top: 15px;
-            font-weight: bold;
-            color: #22c55e;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        /* PORTFOLIO */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 22px;
-        }
-        .portfolio-card {
-            background: rgba(255,255,255,0.04);
-            border-radius: 20px;
-            overflow: hidden;
-        }
-        .portfolio-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-        .portfolio-body {
-            padding: 15px;
-        }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-        /* CHATBOT */
-        #chatbot {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background: #0ea5e9;
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    </style>
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(15, 23, 42, 0.96);
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-circle {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 20% 0, #4ade80, #22c55e, #0ea5e9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #020617;
+      font-size: 18px;
+    }
+
+    .logo-text-main {
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+    }
+
+    nav a {
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+    }
+
+    nav a:hover {
+      border-bottom-color: #22c55e;
+    }
+
+    .btn-header {
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: none;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      background: linear-gradient(120deg, #22c55e, #0ea5e9);
+      color: #020617;
+      box-shadow: 0 0 24px rgba(56, 189, 248, 0.3);
+    }
+
+    main {
+      padding-bottom: 72px;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 40px 0 32px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.26em;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    .hero-title {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(to right, #22c55e, #38bdf8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: #9ca3af;
+      max-width: 480px;
+      margin-bottom: 18px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .hero-badge {
+      font-size: 11px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid #1f2937;
+      color: #e5e7eb;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn-main {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      background: radial-gradient(circle at 0 0, #4ade80, #22c55e, #0ea5e9);
+      color: #020617;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+    }
+
+    .btn-ghost {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      background: rgba(15, 23, 42, 0.96);
+      color: #e5e7eb;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .hero-note {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .hero-panel {
+      background: radial-gradient(circle at 0 0, #1f2937, #020617 70%);
+      border-radius: 22px;
+      padding: 16px;
+      border: 1px solid #1f2937;
+      box-shadow: 0 26px 70px rgba(15, 23, 42, 0.9);
+      font-size: 12px;
+    }
+
+    .hero-panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .hero-panel-title {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero-panel-pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.14);
+      border: 1px solid rgba(34, 197, 94, 0.45);
+      color: #bbf7d0;
+    }
+
+    .hero-panel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .hero-small-card {
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid #1f2937;
+      padding: 10px;
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .hero-small-card h4 {
+      font-size: 12px;
+      margin-bottom: 4px;
+      color: #e5e7eb;
+    }
+
+    .hero-small-card span {
+      display: block;
+      margin-top: 4px;
+      color: #22c55e;
+    }
+
+    .hero-panel-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .hero-tag {
+      font-size: 10px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      background: rgba(15, 23, 42, 0.96);
+      color: #9ca3af;
+    }
+
+    .hero-panel-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .hero-panel-footer strong {
+      display: block;
+      font-size: 12px;
+      color: #e5e7eb;
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: #9ca3af;
+      margin-bottom: 18px;
+      max-width: 640px;
+    }
+
+    .chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .chip {
+      font-size: 11px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid #1f2937;
+      color: #e5e7eb;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .service-card {
+      border-radius: 18px;
+      padding: 16px;
+      background: rgba(15, 23, 42, 0.97);
+      border: 1px solid #1f2937;
+      font-size: 13px;
+    }
+
+    .service-tag {
+      font-size: 10px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid #374151;
+      color: #9ca3af;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .service-title {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #e5e7eb;
+    }
+
+    .service-text {
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
+    .service-price {
+      font-weight: 600;
+      color: #22c55e;
+      margin-top: 6px;
+    }
+
+    .service-img {
+      margin-top: 10px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #1f2937;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .pricing-card {
+      border-radius: 18px;
+      padding: 16px;
+      background: rgba(15, 23, 42, 0.97);
+      border: 1px solid #1f2937;
+      font-size: 13px;
+    }
+
+    .pricing-badge {
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.14);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      color: #bbf7d0;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .pricing-title {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .pricing-price {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .pricing-note {
+      font-size: 11px;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    .pricing-list {
+      list-style: none;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    .pricing-list li::before {
+      content: "• ";
+      color: #22c55e;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .portfolio-card {
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(15, 23, 42, 0.97);
+      border: 1px solid #1f2937;
+    }
+
+    .portfolio-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .portfolio-body {
+      padding: 12px 14px 14px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    .portfolio-body h4 {
+      font-size: 14px;
+      margin-bottom: 4px;
+      color: #e5e7eb;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 18px;
+    }
+
+    .contact-card {
+      border-radius: 18px;
+      padding: 16px;
+      background: rgba(15, 23, 42, 0.97);
+      border: 1px solid #1f2937;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    .contact-card h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #e5e7eb;
+    }
+
+    .contact-field {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contact-field label {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    .contact-field input,
+    .contact-field textarea {
+      font: inherit;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid #374151;
+      background: #020617;
+      color: #e5e7eb;
+    }
+
+    .contact-field textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .contact-submit {
+      margin-top: 10px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      background: radial-gradient(circle at 0 0, #4ade80, #22c55e, #0ea5e9);
+      color: #020617;
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 20px 0 26px;
+      border-top: 1px solid #111827;
+      font-size: 11px;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    /* CHATBOT */
+
+    .chatbot-wrapper {
+      margin-top: 32px;
+    }
+
+    .chatbot-panel {
+      border-radius: 20px;
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid #1f2937;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 320px;
+      font-size: 13px;
+    }
+
+    .chatbot-header {
+      padding: 10px 12px;
+      border-bottom: 1px solid #111827;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .chatbot-header-main {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .chatbot-header-title {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .chatbot-header-sub {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .chatbot-close {
+      background: transparent;
+      border: none;
+      color: #9ca3af;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .chatbot-messages {
+      flex: 1;
+      padding: 10px 12px;
+      overflow-y: auto;
+    }
+
+    .chatbot-message {
+      margin-bottom: 8px;
+      display: flex;
+    }
+
+    .chatbot-message.bot {
+      justify-content: flex-start;
+    }
+
+    .chatbot-message.user {
+      justify-content: flex-end;
+    }
+
+    .chatbot-bubble {
+      max-width: 80%;
+      padding: 8px 10px;
+      border-radius: 14px;
+      line-height: 1.5;
+    }
+
+    .chatbot-message.bot .chatbot-bubble {
+      background: #020617;
+      border: 1px solid #1f2937;
+      color: #e5e7eb;
+    }
+
+    .chatbot-message.user .chatbot-bubble {
+      background: radial-gradient(circle at 0 0, #4ade80, #22c55e, #0ea5e9);
+      color: #020617;
+      font-weight: 500;
+    }
+
+    .chatbot-footer {
+      padding: 10px 10px 12px;
+      border-top: 1px solid #111827;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .chatbot-input-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .chatbot-input {
+      flex: 1;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      background: #020617;
+      padding: 8px 10px;
+      color: #e5e7eb;
+      font-size: 13px;
+    }
+
+    .chatbot-send {
+      border-radius: 999px;
+      border: none;
+      padding: 8px 14px;
+      background: #22c55e;
+      color: #020617;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .chatbot-mic {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      background: #020617;
+      color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .chatbot-rule {
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      nav ul {
+        display: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .chatbot-panel {
+        height: 340px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo-wrap">
+          <div class="logo-circle">A</div>
+          <div>
+            <div class="logo-text-main">ATHY’S CRÉATION</div>
+            <div class="logo-text-sub">IA • Storytelling • Visuels premium</div>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#tarifs">Tarifs</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="btn-header" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Parler de mon projet
+        </button>
+      </div>
+    </div>
+  </header>
 
-<header>
-    <h1>Athy’s Création</h1>
-    <h3>AI • Storytelling • Visuels Premium</h3>
-    <a href="#contact" class="btn-main">Parler de mon projet</a>
-</header>
+  <main id="accueil">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-kicker">Studio Athy’s Création</div>
+          <h1 class="hero-title">
+            IA, storytelling & visuels <span>au service de ta marque</span>
+          </h1>
+          <p class="hero-subtitle">
+            Athy’s Création t’aide à structurer ton message, mettre l’IA à ton service
+            et créer des visuels qui donnent confiance : GPT personnel, agent IA discret,
+            storytelling pro et photos IA publicitaires.
+          </p>
 
-<!-- SERVICES -->
-<section id="services">
-    <h2 class="section-title">Nos Services</h2>
-    <p class="section-subtitle">Des solutions AI haut de gamme pour ton business.</p>
+          <div class="hero-badges">
+            <div class="hero-badge">GPT personnel privé</div>
+            <div class="hero-badge">Agent IA discret</div>
+            <div class="hero-badge">Storytelling & textes</div>
+            <div class="hero-badge">Photos publicitaires IA</div>
+          </div>
 
-    <div class="services-grid">
-        
-        <article class="service-card">
-            <h3 class="service-title">GPT Personnel Privé</h3>
-            <p>Ton GPT personnel, entraîné sur ton activité et ton ton de voix. Idéal pour répondre aux clients, créer du contenu et t’aider dans ton business.</p>
+          <div class="hero-buttons">
+            <button class="btn-main" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+              Découvrir les offres
+            </button>
+            <button class="btn-ghost" onclick="document.getElementById('tarifs').scrollIntoView({behavior:'smooth'})">
+              Voir les tarifs
+            </button>
+          </div>
+
+          <p class="hero-note">
+            1 studio, 1 interlocuteur, pour un écosystème IA cohérent autour de ton activité.
+          </p>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="hero-panel-header">
+            <div class="hero-panel-title">Dashboard Athy’s IA</div>
+            <div class="hero-panel-pill">GPT + Agent IA + Image</div>
+          </div>
+          <div class="hero-panel-grid">
+            <div class="hero-small-card">
+              <h4>GPT personnel</h4>
+              <p>Un GPT réglé sur ton activité, ton ton de voix et tes offres.</p>
+              <span>Ton copilote IA.</span>
+            </div>
+            <div class="hero-small-card">
+              <h4>Agent IA discret</h4>
+              <p>Un agent IA qui t’aide en coulisse, sans être visible côté client.</p>
+              <span>Travaille pour toi 24/7.</span>
+            </div>
+          </div>
+          <div class="hero-panel-tags">
+            <div class="hero-tag">Storytelling & textes pro</div>
+            <div class="hero-tag">Photos IA publicitaires</div>
+            <div class="hero-tag">Branding & image cohérente</div>
+          </div>
+          <div class="hero-panel-footer">
+            <div>
+              <strong>3 piliers</strong>
+              Message, IA & image visuelle alignés.
+            </div>
+            <div>
+              <strong>Pour entrepreneurs</strong>
+              Qui veulent une présence claire et professionnelle.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">Services Athy’s Création</h2>
+        <p class="section-subtitle">
+          Des offres pensées pour clarifier ton message, automatiser intelligemment
+          avec l’IA et renforcer ton image grâce à des visuels de marque.
+        </p>
+
+        <div class="chips-row">
+          <span class="chip">GPT personnel privé</span>
+          <span class="chip">Agent IA discret</span>
+          <span class="chip">Storytelling & textes</span>
+          <span class="chip">Photos publicitaires IA</span>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-tag">IA sur mesure</div>
+            <h3 class="service-title">GPT personnel privé</h3>
+            <p class="service-text">
+              Création de ton propre GPT, entraîné sur ton activité, ton ton de voix et
+              tes offres. Un assistant IA qui te connaît vraiment et t’aide à répondre,
+              créer du contenu et structurer tes idées.
+            </p>
             <p class="service-price">À partir de 490 €</p>
-        </article>
+            <div class="service-img">
+              <img src="https://picsum.photos/seed/athys-gpt/800/450"
+                   alt="Interface de GPT personnel privé pour entrepreneur" />
+            </div>
+          </article>
 
-        <article class="service-card">
-            <h3 class="service-title">Agent AI Professionnel</h3>
-            <p>Un agent AI 100% discret qui traite, filtre et t’envoie les informations importantes. Ton assistant intelligent.</p>
+          <article class="service-card">
+            <div class="service-tag">Agent IA</div>
+            <h3 class="service-title">Agent IA discret</h3>
+            <p class="service-text">
+              Un agent IA configuré pour t’aider dans la gestion : tri, suggestions de réponses,
+              synthèses, idées de contenu. Il t’assiste en coulisse, sans être mentionné côté client.
+            </p>
             <p class="service-price">À partir de 390 €</p>
-        </article>
-
-        <article class="service-card">
-            <h3 class="service-title">Storytelling & Portfolio</h3>
-            <p>Récit professionnel + mini-portfolio visuel pour tes réseaux, site, pitch ou lancement.</p>
-            <p class="service-price">À partir de 350 €</p>
-        </article>
-
-        <article class="service-card">
-            <h3 class="service-title">Visuels Photos AI (Pub, Shooting, Branding)</h3>
-            <p>Création de photos AI premium : campagnes publicitaires, portraits, produits, branding, réseaux sociaux.</p>
-            <p class="service-price">À partir de 420 €</p>
-        </article>
-
-    </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio">
-    <h2 class="section-title">Portfolio Créatif</h2>
-    <p class="section-subtitle">Quelques exemples de styles que nous pouvons créer ensemble.</p>
-
-    <div class="portfolio-grid">
-
-        <article class="portfolio-card">
-            <img src="https://picsum.photos/seed/athys1/900/600" alt="Studio AI">
-            <div class="portfolio-body">
-                <h4>Studio AI</h4>
-                <p>Dashboard + visuels AI premium.</p>
+            <div class="service-img">
+              <img src="https://picsum.photos/seed/athys-agent/800/450"
+                   alt="Agent IA discret pour gestion d’activité" />
             </div>
-        </article>
+          </article>
 
-        <article class="portfolio-card">
-            <img src="https://picsum.photos/seed/athys2/900/600" alt="Branding AI">
-            <div class="portfolio-body">
-                <h4>Branding AI</h4>
-                <p>Visuels cohérents pour la marque.</p>
-            </div>
-        </article>
-
-        <article class="portfolio-card">
-            <img src="https://picsum.photos/seed/athys3/900/600" alt="Shooting AI">
-            <div class="portfolio-body">
-                <h4>Shooting publicitaire</h4>
-                <p>Produits & services en version premium.</p>
-            </div>
-        </article>
-
-        <article class="portfolio-card">
-            <img src="https://picsum.photos/seed/athys4/900/600" alt="Storytelling AI vidéo">
-            <div class="portfolio-body">
-                <h4>Storytelling Vidéo AI</h4>
-                <p>Mini-clips narratifs pour réseaux.</p>
-            </div>
-        </article>
-
-        <article class="portfolio-card">
-            <img src="https://picsum.photos/seed/athys5/900/600" alt="Storytelling Texte AI">
-            <div class="portfolio-body">
-                <h4>Storytelling Texte AI</h4>
-                <p>Récit professionnel + structuration.</p>
-            </div>
-        </article>
-
-        <article class="portfolio-card">
-            <img src="https://picsum.photos/seed/athys6/900/600" alt="Mix Créatif AI">
-            <div class="portfolio-body">
-                <h4>Créations Hybrides AI</h4>
-                <p>Mix visuel + texte + branding AI.</p>
-            </div>
-        </article>
-
-    </div>
-</section>
-
-<!-- CHATBOT -->
-<div id="chatbot">💬</div>
-
-</body>
-</html>
+          <article class="service-card">
+            <div class="service-tag">Storytelling</div>
+            <h3 class="service-title">Storytelling & portfolio</h3>
+            <p class="service-text">
+              Construction d’un storytelling clair : qui tu es, ce que tu proposes,
+              à qui tu t’adresses et pourquoi. Textes pour site, page de présentation,
+              portfolio, bio réseaux…
+            </p>
+            <p class=
